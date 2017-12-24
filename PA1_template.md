@@ -47,7 +47,7 @@ Now the histogram of total number of steps per day is plotted.
 
     hist(activity_daily$steps,breaks = 50, main = "Total number of steps per day", xlab = "Steps")
 
-<img src="PA1_template_files/figure-markdown_strict/Hist-1.png" style="display: block; margin: auto;" />
+<img src="figure-html/Hist-1.png" style="display: block; margin: auto;" />
 
 ### Mean and median of total number of steps per day
 
@@ -79,7 +79,7 @@ over all days.
 
     plot(activity_5min$interval,activity_5min$steps,type="l",main="Number of steps for each 5 min", xlab="Time", ylab="Steps")
 
-<img src="PA1_template_files/figure-markdown_strict/TS1-1.png" style="display: block; margin: auto;" />
+<img src="figure-html/TS1-1.png" style="display: block; margin: auto;" />
 
 ### The interval with the maximum number of steps
 
@@ -115,7 +115,7 @@ interval.
     activity_daily_impute <- aggregate(steps_impute~date,activity,sum,na.rm=TRUE)
     hist(activity_daily_impute$steps_impute,breaks=50,main = "Total number of steps per day", xlab = "Steps")
 
-<img src="PA1_template_files/figure-markdown_strict/Hist2-1.png" style="display: block; margin: auto;" />
+<img src="figure-html/Hist2-1.png" style="display: block; margin: auto;" />
 
 ### Mean and median of total number of steps per day
 
@@ -146,7 +146,7 @@ Plot the corresponding time series using lattice plot.
     library(lattice)
     xyplot(steps_impute ~ interval|date_wk, data=activity, type='l',layout=c(1,2),ylab="Steps", xlab="Time", main="Number of steps over time")
 
-<img src="PA1_template_files/figure-markdown_strict/TS2-1.png" style="display: block; margin: auto;" />
+<img src="figure-html/TS2-1.png" style="display: block; margin: auto;" />
 
 It can be observed that people start to walk earlier on weekdays than
 weekends.
